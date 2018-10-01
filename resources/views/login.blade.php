@@ -7,9 +7,9 @@
 @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
-            @if(!\Api::isAuth())
+            @if(!$isAuth)
                 <div class="btn">
-                    <a class="btn btn-primary" href="{{ Api::getUrlOauthUser()  }}">@lang('button.login')</a>
+                    <a class="btn btn-primary" href="{{ $getUrlOauthUser  }}">@lang('button.login')</a>
                 </div>
             @else
                 <span>
